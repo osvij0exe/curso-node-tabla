@@ -14,6 +14,12 @@ const argv = require('yargs')
                     default: 10,
                     describe:'hasta que tabla vamos a calcular'
                 })
+                .option('l',{
+                    alias: 'listar',
+                    type: 'boolean',
+                    demandOption: false,
+                    describe:'Muestra la tabla en consola'
+                })
                 .check( (argv,options) =>{
                     if(isNaN(argv.b)){
                         throw 'La base tiene que ser un número'
